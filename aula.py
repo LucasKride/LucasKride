@@ -6,23 +6,23 @@ print("********************************")
 
 
 numero_secreto = random.randrange(1,101)
-total_de_tentativas = 3
+total_de_tentativas = 0
 
 print("Qual nivel de dificuldade?: ")
 print("(1) Facil (2) Medio (3) Dificil")
-nivel_str = input("Defina o nivel: ")
-nivel = int(nivel_str)
+nivel = 0
 
-
-if(nivel < 1 or nivel > 3):
-    print("O nivel de dificuldade deve estar entre 1 e 3!")
+while(nivel < 1 or nivel > 3):
+    nivel = int(input("Digite um nivel: "))
 
 if(nivel == 1):
     total_de_tentativas = 20
 elif(nivel == 2):
     total_de_tentativas = 10
-else:
+elif(nivel == 3):
     total_de_tentativas = 5
+else:
+    print("Digite uma opção válida!")
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}". format(rodada, total_de_tentativas))
@@ -41,7 +41,7 @@ for rodada in range(1, total_de_tentativas + 1):
 
     if (acertou):
         print("Você acertou!")
-        print("O numero secreto realmente eh {}". format(numero_secreto))
+        print("O numero secreto é {}". format(numero_secreto))
         break
     else:
         if (maior):
