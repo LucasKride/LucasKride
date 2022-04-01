@@ -1,7 +1,6 @@
 from PySimpleGUI import PySimpleGUI as sg
 
 #Layout
-sg.theme('Default')
 layout = [
     [sg.Text('Usuario'), sg.Input(key='usuario', size=(10,1))],
     [sg.Text('Senha  '), sg.Input(key='senha', password_char='*', size=(10,1))],
@@ -19,3 +18,5 @@ while True:
     if eventos == 'Entrar':
         if valores['usuario'] == 'Lucas' and valores['senha'] == '123456':
             print('Bem vindo Lucas')
+        else:
+            print('Acesso Negado')
