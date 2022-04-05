@@ -34,7 +34,7 @@ def jogar():
         print("jogando...")
 
     if (acertou):
-        print("Voce ganhou!")
+        print("******Voce ganhou!******")
     else:
         print("Voce perdeu!")
     print("Fim de Jogo!")
