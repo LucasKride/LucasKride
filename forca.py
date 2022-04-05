@@ -34,7 +34,6 @@ def jogar():
             print("O numero de erros foi {}".format(erro))
         
         enforcou = erro == 6
-        print("Enforcou!")
         print(letras_acertadas)
         print("jogando...")
 
