@@ -1,11 +1,14 @@
+from re import X
+
+
 def jogar():
 
     print("**************************")
     print("Bem vindo ao jogo da forca")
     print("**************************")
 
-    palavra_secreta = "banana".upper()
-    letras_acertadas = ["_","_","_","_","_","_"]
+    palavra_secreta = "melancia".upper()
+    letras_acertadas = ['_' for letras_acertadas in palavra_secreta]
 
     enforcou = False
     acertou  = False
@@ -26,10 +29,10 @@ def jogar():
                 index = index + 1
         else:
             erro = erro + 1
-            print("O numero de erros foi {}".format(erro))
+            print("Ops, você errou! Faltam {} tentativas.".format(6-erro))
 
         enforcou = erro == 6
-        acertou = "_" not in letras_acertadas
+        acertou = '_' not in letras_acertadas
         print(letras_acertadas)
         print("jogando...")
 
