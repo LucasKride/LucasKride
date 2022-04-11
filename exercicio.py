@@ -1,8 +1,6 @@
-#arquivo copia.py
-logo = open('python-logo.png', 'rb')
-data = logo.read()
-logo.close()
+# declara a função
+def imprime_mensagem():
+    print("Olá")
 
-logo2 = open('python-logo2.png', 'wb')
-logo2.write(data)
-logo2.close()
+# chama a função
+imprime_mensagem()
